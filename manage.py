@@ -1,5 +1,5 @@
 from app import kora_app
-from flask_script import Manager
+from flask_script import Manager,Server
 
 # creating the app instance
 app = kora_app('development')
