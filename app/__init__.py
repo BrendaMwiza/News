@@ -16,8 +16,8 @@ def kora_app(config_name):
     # bootstrap.init_app(app)
 
     # registration of the blueprint
-    # from .main import main
-    # app.register_blueprint(main_blueprint)
+    from .main import main
+    app.register_blueprint(main_blueprint)
 
     # setting the configurations
     from.request import config_request
