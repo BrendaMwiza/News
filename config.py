@@ -2,7 +2,7 @@ import os
 
 class Config:
     '''
-    General configuration parent class
+    General config parent class
     '''
 
     NEWS_API_KEY = '2fba2e985b9b466cbf2776e5dcfa728c'
@@ -14,17 +14,17 @@ class Config:
 
 class ProdConfig(Config):
     '''
-    Production  configuration child class
+    The production  config child class
     Args:
-        Config: The parent configuration class with General configuration settings
+        Config: The parent config class with General configuration settings
     '''
     pass
 
 class DevConfig(Config):
     '''
-    Development  configuration child class
+    The development  config child class
     Args:
-        Config: The parent configuration class with General configuration settings
+        Config: The parent config class with General configuration settings
     '''
 
     DEBUG = True
