@@ -62,23 +62,23 @@ def process_source(source_list):
 
 
 
-# def get_article():
-#     '''
-#     Function for getting the json response to our url request
-#     '''
-#     get_articles_url = base_article_url.format('everything', api_key) + "&sources="
+def get_article():
+    '''
+    Function for getting the json response to our url request
+    '''
+    get_articles_url = base_article_url.format('everything', api_key) + "&sources="
 
-#     with urllib.request.urlopen(get_articles_url) as url:
-#         get_article_data = url.read()
-#         get_article_response = json.loads(get_article_data)
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_article_data = url.read()
+        get_article_response = json.loads(get_article_data)
 
-#         article_results = None
+        article_results = None
 
-#         if get_article_response['articles']:
-#             articles_results_list = get_article_response['articles']
-#             article_results = process_articles(articles_results_list)
+        if get_article_response['articles']:
+            articles_results_list = get_article_response['articles']
+            article_results = process_articles(articles_results_list)
 
-#     return article_results
+    return article_results
 
 # def process_articles(articles_list):
 #     '''
