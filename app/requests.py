@@ -80,25 +80,25 @@ def get_article():
 
     return article_results
 
-# def process_articles(articles_list):
-#     '''
-#     Function  that processes the articles results and transform them to a list of Objects
-#     Args:
-#         articles_list: A list of dictionaries that contain articles details
-#     Returns :
-#         article_results: A list of articles objects
-#     '''
-#     article_results = []
-#     for article_item in articles_list:
-#         id = article_item.get('id')
-#         name = article_item.get('name')
-#         author = article_item.get('author')
-#         title = article_item.get('title')
-#         description = article_item.get('description')
-#         url = article_item.get('url')
-#         urlToImage = article_item.get('urlToImage')
-#         publishedAt = article_item.get('publishedAt')
+def process_articles(articles_list):
+    '''
+    Function  that processes the articles results and transform them to a list of Objects
+    Args:
+        articles_list: A list of dictionaries that contain articles details
+    Returns :
+        article_results: A list of articles objects
+    '''
+    article_results = []
+    for article_item in articles_list:
+        id = article_item.get('id')
+        name = article_item.get('name')
+        author = article_item.get('author')
+        title = article_item.get('title')
+        description = article_item.get('description')
+        url = article_item.get('url')
+        urlToImage = article_item.get('urlToImage')
+        publishedAt = article_item.get('publishedAt')
 
-#         article_results.append(Article(id, name, author, title, description, url, urlToImage, publishedAt))
+        article_results.append(Article(id, name, author, title, description, url, urlToImage, publishedAt))
 
-#     return article_results
+    return article_results
