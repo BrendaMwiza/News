@@ -11,4 +11,12 @@ def index():
     title = "Right at News Highlights"
 
     return render_template('index.html', title = title, sources = news_source)
-    
+
+@main.route('/article/<article_id>')
+def article(article_id):
+    '''
+    function for returning artcicle details and its data
+    '''
+    article = get_article()
+
+    return render_template('article.html',  article = article)
