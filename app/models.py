@@ -1,4 +1,4 @@
-class Source:
+class Sources:
     '''
     Source class to define Source objects
     '''
@@ -12,7 +12,7 @@ class Source:
         self.language = language
         self.country = country
 
-class Article:
+class Articles:
     '''
     Article class to define Article objects
     '''

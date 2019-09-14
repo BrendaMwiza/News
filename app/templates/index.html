@@ -1,26 +1,7 @@
-{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
-
-<!-- Styles block -->
-
-{% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{% endblock %}
-
-{% block content %}
-
-    <body>
-        <h1 style="text-align:center"> <b>NEWS SOURCES</b> </h1>
-        <ul>
-            {% for news_source in sources %}
-                <li style="list-style-type:none; font: size 24px;"><h3> <a href="{{ news_sources.url}}">{{ news_sources.name}}</a> </h3></li>
-                <li style="list-style-type:none"><p> {{ news_sources.description }} </p></li>
-                <a href="/articles/{{ news_source.id }}" class="btn btn-primary">Click Here To Read Articles</a>
-                
-                <hr> 
-            {% endfor %}
-        </ul>
-    </body>
-
-{% endblock %}
+<body>
+    <h1>SOURCES</h1>
+    <ul>
+        
+    </ul>
+</body>

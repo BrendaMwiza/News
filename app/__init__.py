@@ -1,8 +1,8 @@
 from flask import Flask
 from config import config_options
-# from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap
 
-# bootstrap = Bootstrap()
+bootstrap = Bootstrap()
 
 def kora_app(config_name):
 
@@ -13,7 +13,7 @@ def kora_app(config_name):
     app.config.from_object(config_options[config_name])
 
     #Initialization of extentions
-    # bootstrap.init_app(app)
+    bootstrap.init_app(app)
 
     # registration of the blueprint
     from .main import main as main_blueprint

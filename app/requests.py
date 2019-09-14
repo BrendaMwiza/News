@@ -1,5 +1,5 @@
 import urllib.request, json
-from .models import Source, Article
+from .models import Sources, Articles
 
 
 #get api key
@@ -15,7 +15,7 @@ def config_request(app):
     base_source_url = app.config['NEWS_SOURCE_API_BASE_URL']
     base_article_url = app.config['NEWS_ARTICLES_API_BASE_URL']
 
-def get_sources():
+def get_source():
     '''
     Function for getting the json response to the url request
     '''
