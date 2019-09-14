@@ -7,7 +7,7 @@ bootstrap = Bootstrap()
 def kora_app(config_name):
 
     # Initializing the application
-    app = Flask(__name__)
+    app = Flask(__name__,instance_relative_config = True)
 
     # Create the configurations of the app
     app.config.from_object(config_options[config_name])
