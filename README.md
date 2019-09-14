@@ -1,19 +1,19 @@
-# Indipendent Project week-2
-#News-Highlights
+## Indipendent Project week-2
+## News-Highlights
 The News Highlights App lets the user view news highlights from different sources and articles
 
-#By MWIZA Brenda
+## By MWIZA Brenda
 
-#Description
+## Description
 
 News Highlights is a web application that displays a list of news sources from different corners of the world. The user is able to go the source page and view the news sources and views articles of that news source. The application makes use of the news api that allows one to fetch api data and it is free.
 
-#Project setup instructions
+## Project setup instructions
 to start using this project apply the following commands: . git clone https://github.com/BrendaMwiza/News.git . code .(for visual studio code) . atom .
 
 
 
-#BDD
+## BDD
 
 The user visits the app url in any browser and plays with the application
 The user can also click on the news sources to view the news articles
@@ -41,13 +41,13 @@ Python3.5
 #TDD
 Testing was done using python inbuilt test tool called unittest
 
-#Known Bugs
+## Known Bugs
 No known bugs.
 
-# More Documentation
+## More Documentation
 To get Further help you can visit the official python and flask documentation.
 
-#License
+## License
 Linced under
 MIT Open Source license and Moringa School License
 
@@ -55,5 +55,5 @@ Copyright Brenda Mwiza
 
 . Permission is granted and free of charge to any person obtaining a copy.
 
-#Contacts
+## Contacts
 brendabrizy@gmail.com    
