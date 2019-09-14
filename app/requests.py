@@ -12,10 +12,10 @@ base_article_url = None
 def config_request(app):
     global api_key, base_article_url, base_source_url
     api_key = app.config['NEWS_API_KEY']
-    base_source_url = app.config['NEWS_SOURCE_API_BASE_URL']
-    base_article_url = app.config['NEWS_ARTICLES_API_BASE_URL']
+    base_source_url = app.config['SOURCE_API_BASE_URL']
+    base_article_url = app.config['ARTICLES_API_BASE_URL']
 
-def get_source():
+def get_sources():
     '''
     Function for getting the json response to the url request
     '''

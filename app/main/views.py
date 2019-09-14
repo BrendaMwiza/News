@@ -1,13 +1,15 @@
 from flask import render_template
 from . import main
-from flask import request
+from ..models import Sources, Articles
+from flask import request,redirect,url_for
+from ..request import get_sources, get_article
 
 @main.route('/')
 def index():
     '''
     function that returns the index page and it's data
     '''
-    news_source = get_source()
+    news_source = get_sources()
 
     title = "Right at News Highlights"
 
