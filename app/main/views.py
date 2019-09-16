@@ -15,7 +15,7 @@ def index():
 
     return render_template('index.html', title = title, new_source = new_source)
 
-@main.route('/article/<article_id>')
+@main.route('/article/<int:article_id>')
 def article(article_id):
     '''
     function for returning artcicle details and its data

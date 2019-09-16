@@ -24,7 +24,7 @@ def get_sources():
     with urllib.request.urlopen(get_source_url) as url:
         get_source_data = url.read()
         get_source_response = json.loads(get_source_data)
-        print(get_source_response)
+        
         source_results = None
 
         if get_source_response['sources']:
@@ -52,8 +52,8 @@ def process_source(source_list):
         language = sources_item.get('language')
         country = sources_item.get('country')
 
-        sources_object = Source(id, name, description, url, category, language, country)
-        source_results.append(source_object)
+        sources_object = Sources(id, name, description, url, category, language, country)
+        source_results.append(sources_object)
         
         
 
