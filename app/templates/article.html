@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
-<body>
-    <div class="container">
-        <div class="row">
-            <h2> {{ macro.displayArticleList(articles) }} </h2>
-        </div>
-    </div>
-</body>
+{% block content %}
+    <body style="list-style-type:none; text-align: center; " class="container">
+        <h1 style="color: rgb(20, 20, 20);">NEWS ARTICLE</h1>
+        <ul>
+            {% for article_item in article %}
+                <li style="list-style-type:none; font-size:  size 24px;"><h3> {{article_item.title}} </h3></li>
+                <li style="list-style-type:none;text-align: center; "><img style="height: 400px; width:400px;" src="{{article_item.urlToImage}}"></li>
+                <li style="list-style-type:none; text-align: center;font-size: 15px; "><p> {{ article_item.description }} </p></li>
+                <li style="list-style-type:none; text-align: center;font-size: 15px; "><p> {{ article_item.publishedAt }} by {{article_item.author}} </p></li>
+                <li style="list-style-type:none;  font: size 24px;" ><a style="background-color: darkgray;" href="{{ article_item.url }}" class="btn btn-primary">More details</a></li>
+                <hr>
+            {% endfor %}
+        </ul>
+    </body>
+{% endblock %}
 </html>

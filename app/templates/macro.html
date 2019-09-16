@@ -1,7 +1,7 @@
-{% macro displayArticleList(articles_list) %}
+{% macro displayArticleList(article_results) %}
 
-    {% for articles in articles_list %}
-        <li style="list-style-type:none"> {{ articles.title }} </li>
+    {% for article in article_results %}
+        <li style="list-style-type:none"> {{ article.title }} </li>
     {% endfor %}
 
 {% endmacro %}

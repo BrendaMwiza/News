@@ -62,34 +62,34 @@ def process_source(source_list):
 
 
 
-def get_article():
+def get_article(id):
     '''
     Function for getting the json response to our url request
     '''
-    get_articles_url = base_article_url.format('everything', api_key) + "&sources="
+    get_article_url = base_article_url.format(id, api_key) + "&sources="
 
-    with urllib.request.urlopen(get_articles_url) as url:
+    with urllib.request.urlopen(get_article_url) as url:
         get_article_data = url.read()
         get_article_response = json.loads(get_article_data)
 
         article_results = None
 
         if get_article_response['articles']:
-            articles_results_list = get_article_response['articles']
-            article_results = process_articles(articles_results_list)
+            article_results_list = get_article_response['articles']
+            article_results = process_articles(article_results_list)
 
     return article_results
 
-def process_articles(articles_list):
+def process_articles(article_list):
     '''
-    Function  that processes the articles results and transform them to a list of Objects
+    Function  that processes the article results and transform them to a list of Objects
     Args:
-        articles_list: A list of dictionaries that contain articles details
+        article_list: A list of dictionaries that contain article details
     Returns :
-        article_results: A list of articles objects
+        article_results: A list of article objects
     '''
     article_results = []
-    for article_item in articles_list:
+    for article_item in article_list:
         id = article_item.get('id')
         name = article_item.get('name')
         author = article_item.get('author')
@@ -99,6 +99,6 @@ def process_articles(articles_list):
         urlToImage = article_item.get('urlToImage')
         publishedAt = article_item.get('publishedAt')
 
-        article_results.append(Article(id, name, author, title, description, url, urlToImage, publishedAt))
+        article_results.append(Articles(id, name, author, title, description, url, urlToImage, publishedAt))
 
     return article_results

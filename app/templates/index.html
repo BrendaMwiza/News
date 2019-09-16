@@ -2,13 +2,13 @@
 {% import 'macro.html' as macro %}
 
 {% block content %}
-    <body style="list-style-type:none; text-align: center; ">
+    <body style="list-style-type:none; text-align: center; " class="container">
         <h1>SOURCES FOR THE NEWS</h1>
         <ul>
             {% for source in new_source %}
-                <li style="list-style-type:none; color: darkgray; font: size 24px;"><h3> <a href="{{ source.url}}">{{source.name}}</a> </h3></li>
+                <li style="list-style-type:none; font: size 24px;"><h3> <a style="color: rgb(20, 20, 20); font: size 24px;" href="{{ source.url}}">{{source.name}}</a> </h3></li>
                 <li style="list-style-type:none; text-align: center; "><p> {{ source.description }} </p></li>
-                <a href="/articles/{{ source.id }}" class="btn btn-primary">Click Here To Read Articles</a>
+                <a style="background-color: darkgray; font: size 24px;" href="/new_source/{{ source.id }}" class="btn btn-primary">Read Articles</a>
                 <hr>
             {% endfor %}
         </ul>

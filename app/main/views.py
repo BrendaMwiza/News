@@ -15,11 +15,11 @@ def index():
 
     return render_template('index.html', title = title, new_source = new_source)
 
-@main.route('/article/<int:article_id>')
-def article(article_id):
+@main.route('/new_source/<id>')
+def article(id):
     '''
     function for returning artcicle details and its data
     '''
-    article = get_article()
+    article = get_article(id)
 
     return render_template('article.html',  article = article)
